@@ -28,9 +28,9 @@ $(function () {
   const adigText = $('#adig-text')
   const shipButton = $('#oship')
   const shipText = $('#oship-text')
-  const bwText = $("#bw-text")[0]
-  const bcText = $('#bc-text')[0]
-  const bpText = $('#bp-text')[0]
+  const bwText = $('#bw-text')
+  const bcText = $('#bc-text')
+  const bpText = $('#bp-text')
 
   let race = 'Alchemists'
 
