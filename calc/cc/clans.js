@@ -14,16 +14,16 @@ $(function () {
     vs.tot = vs.p1t + vs.p2t + vs.p3t + vs.p4t;
     vs.sut = vs.p1s + vs.p2s + vs.p3s + vs.p4s;
     // cotton multiplier
-    if (vs.cot >= vs.tot && vs.cot >= vs.sut) vs.com = 5;
-    else if (vs.cot >= vs.tot || vs.cot >= vs.sut) vs.com = 4;
+    if (vs.cot <= vs.tot && vs.cot <= vs.sut) vs.com = 5;
+    else if (vs.cot <= vs.tot || vs.cot <= vs.sut) vs.com = 4;
     else vs.com = 3;
     // tobacco multiplier
-    if (vs.tot > vs.cot && vs.tot >= vs.sut) vs.tom = 5;
-    else if (vs.tot > vs.cot || vs.tot >= vs.sut) vs.tom = 4;
+    if (vs.tot < vs.cot && vs.tot <= vs.sut) vs.tom = 5;
+    else if (vs.tot < vs.cot || vs.tot <= vs.sut) vs.tom = 4;
     else vs.tom = 3;
     // sugar multiplier
-    if (vs.sut > vs.cot && vs.sut > vs.tot) vs.sum = 5;
-    else if (vs.sut > vs.cot || vs.sut > vs.tot) vs.sum = 4;
+    if (vs.sut < vs.cot && vs.sut < vs.tot) vs.sum = 5;
+    else if (vs.sut < vs.cot || vs.sut < vs.tot) vs.sum = 4;
     else vs.sum = 3;
     // player points
     vs.p1p = vs.p1c * vs.com + vs.p1t * vs.tom + vs.p1s * vs.sum;
